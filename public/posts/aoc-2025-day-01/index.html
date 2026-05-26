@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<title>Day 1 | Secret Entrance</title>
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  <body>
+    <main>
+      <nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/posts/">Blog</a></li>
+  </ul>
+</nav>
+ 
+<h1>Day 1 | Secret Entrance</h1>
+<p>May 26, 2026</p>
+
+
+<p>Series: Advent of Code 2025</p>
+ 
+<p>
+  Tags: 
+  <span>Advent of Code 2025</span>
+  
+  <span>Modulus on Negative Numbers</span>
+  
+  <span>Go</span>
+  
+</p>
+ 
+<p>
+  Categories: 
+  <span>Advent of Code 2025</span>
+  
+</p>
+ <p>This is my solution to <a href="https://adventofcode.com/2025/day/1">https://adventofcode.com/2025/day/1</a>.</p>
+<p><strong>The Gist</strong></p>
+<p>Given a list of instructions for turning a 100 position circular safe dial (numbered 0 to 99), track the position of the dial as we spin it left and right, and count how many times it lands on exactly 0.</p>
+<p><strong>Notes on Modulus on Negative Numbers</strong></p>
+<p>In Go, % doesn&rsquo;t mean modulo, it means remainder. Because of this, it cannot be used directly to find the modulus of negative numbers.</p>
+<p>For example, -1 % 5 mathematically should be 4, but Go will evaluate it to be -1 because it truncates towards 0.</p>
+<p>To solve this, first evaluate the expression and see whether the result is negative or positive (including the 0 case).</p>
+<p>If it is positive, the answer is correct. If it is negative, add the divisor, which wraps the answer back into a positive value.</p>
+<p>For example, -1 % 5 evaluates to -1, which is negative, so we add the divisor (-1 + 5) to get the correct answer of 4.</p>
+<pre tabindex="0"><code>func modulo(a, b int) int {
+    r := a % b
+    if r &lt; 0 {
+        return r + b
+    }
+    return r
+}
+</code></pre><p>Simplifying further, we can also just unconditionally add b to the initial remainder, as we will be easily able to wrap it back into bounds when we apply the modulus again.</p>
+<p>This means we no longer need to use branching.</p>
+<p>In other words,</p>
+<ul>
+<li>
+<p>a % b: The initial remainder.</p>
+</li>
+<li>
+<p>(a % b) + b: Adding b ensures a negative result becomes positive, and a positive result gets pushed forward beyond the next boundary.</p>
+</li>
+<li>
+<p>((a % b) + b) % b: The final modulo has no effect on the originally negative result, but safely wraps the positive result back into the correct boundary.</p>
+</li>
+</ul>
+<p><strong>My final code</strong></p>
+<pre tabindex="0"><code class="language-package" data-lang="package">
+import (
+	&#34;bufio&#34;
+	&#34;fmt&#34;
+	&#34;os&#34;
+	&#34;strconv&#34;
+)
+
+type Simulation struct {
+	Moves           []int
+	InitialPosition int
+	TotalPositions  int
+	Target          int
+}
+
+func main() {
+	moves, err := ParseInstructionsFromFile(&#34;input.txt&#34;)
+	if err != nil {
+		fmt.Println(&#34;Failed to parse instructions: &#34;, err)
+		return
+	}
+
+	sim, err := NewSimulation(moves, 50, 100, 0)
+	if err != nil {
+		fmt.Println(&#34;Simulation could not be created:&#34;, err)
+		return
+	}
+
+	result, err := sim.Run()
+
+	if err != nil {
+		fmt.Println(&#34;Simulation failed: &#34;, err)
+		return
+	}
+
+	fmt.Println(sim.Target, &#34;was hit&#34;, result, &#34;times.&#34;)
+}
+
+func NewSimulation(moves []int, start, total, target int) (*Simulation, error) {
+	if total &lt;= 0 {
+		return nil, fmt.Errorf(&#34;Total positions must be greater than 0&#34;)
+	}
+
+	return &amp;Simulation{
+		Moves:           moves,
+		InitialPosition: start,
+		TotalPositions:  total,
+		Target:          target,
+	}, nil
+}
+
+func ParseInstructionsFromFile(filename string) (movesList []int, err error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, fmt.Errorf(&#34;Failed to open file: %v&#34;, err)
+	}
+	defer file.Close()
+
+	movesList = []int{}
+	scanner := bufio.NewScanner(file)
+
+	for scanner.Scan() {
+		line := scanner.Text()
+
+		if len(line) == 0 {
+			continue
+		}
+
+		distance, err := strconv.Atoi(line[1:])
+		if err != nil {
+			return nil, fmt.Errorf(&#34;line %s: %w&#34;, line, err)
+		}
+
+		switch line[0] {
+		case &#39;R&#39;:
+			movesList = append(movesList, distance)
+		case &#39;L&#39;:
+			movesList = append(movesList, -distance)
+		default:
+			return nil, fmt.Errorf(&#34;invalid direction &#39;%c&#39; on line: %s&#34;, line[0], line)
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		return nil, fmt.Errorf(&#34;scan: %w&#34;, err)
+	}
+
+	return movesList, nil
+
+}
+
+func (s *Simulation) Run() (int, error) {
+
+	count := 0
+	currentPosition := s.InitialPosition
+
+	for _, move := range s.Moves {
+		position := currentPosition + move
+		currentPosition = s.Wrap(position)
+
+		if currentPosition == s.Target {
+			count++
+		}
+	}
+	return count, nil
+}
+
+func (s *Simulation) Wrap(position int) int {
+	return ((position % s.TotalPositions) + s.TotalPositions) % s.TotalPositions
+}
+</code></pre>  
+ <footer>
+   Website made by  in 2026
+ </footer>
+
+    </main>
+  </body>
+</html>

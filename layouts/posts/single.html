@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Date.Format "January 2, 2006" }}</p>
+
+{{ with .Params.series }}
+<p>Series: {{ . }}</p>
+{{ end }} {{ with .Params.tags }}
+<p>
+  Tags: {{ range . }}
+  <span>{{ . }}</span>
+  {{ end }}
+</p>
+{{ end }} {{ with .Params.categories }}
+<p>
+  Categories: {{ range . }}
+  <span>{{ . }}</span>
+  {{ end }}
+</p>
+{{ end }} {{ .Content }} {{ end }}

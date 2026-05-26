@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<title>Day 1: Secret Entrance</title>
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  <body>
+    <nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/posts/">Blog</a></li>
+  </ul>
+</nav>
+ 
+<h1>Day 1: Secret Entrance</h1>
+<p>May 26, 2026</p>
+<pre tabindex="0"><code>package main
+
+import (
+&#34;bufio&#34;
+&#34;fmt&#34;
+&#34;os&#34;
+&#34;strconv&#34;
+)
+
+type Simulation struct {
+Moves []int
+InitialPosition int
+TotalPositions int
+Target int
+}
+
+func main() {
+moves, err := ParseInstructionsFromFile(&#34;input.txt&#34;)
+if err != nil {
+fmt.Println(&#34;Failed to parse instructions: &#34;, err)
+return
+}
+
+    sim, err := NewSimulation(moves, 50, 100, 0)
+    if err != nil {
+    	fmt.Println(&#34;Simulation could not be created:&#34;, err)
+    	return
+    }
+
+    result, err := sim.Run()
+
+    if err != nil {
+    	fmt.Println(&#34;Simulation failed: &#34;, err)
+    	return
+    }
+
+    fmt.Println(sim.Target, &#34;was hit&#34;, result, &#34;times.&#34;)
+
+}
+
+func NewSimulation(moves []int, start, total, target int) (\*Simulation, error) {
+if total &lt;= 0 {
+return nil, fmt.Errorf(&#34;Total positions must be greater than 0&#34;)
+}
+
+    return &amp;Simulation{
+    	Moves:           moves,
+    	InitialPosition: start,
+    	TotalPositions:  total,
+    	Target:          target,
+    }, nil
+
+}
+
+func ParseInstructionsFromFile(filename string) (movesList []int, err error) {
+file, err := os.Open(filename)
+if err != nil {
+return nil, fmt.Errorf(&#34;Failed to open file: %v&#34;, err)
+}
+defer file.Close()
+
+    movesList = []int{}
+    scanner := bufio.NewScanner(file)
+
+    for scanner.Scan() {
+    	line := scanner.Text()
+
+    	if len(line) == 0 {
+    		continue
+    	}
+
+    	distance, err := strconv.Atoi(line[1:])
+    	if err != nil {
+    		return nil, fmt.Errorf(&#34;line %s: %w&#34;, line, err)
+    	}
+
+    	switch line[0] {
+    	case &#39;R&#39;:
+    		movesList = append(movesList, distance)
+    	case &#39;L&#39;:
+    		movesList = append(movesList, -distance)
+    	default:
+    		return nil, fmt.Errorf(&#34;invalid direction &#39;%c&#39; on line: %s&#34;, line[0], line)
+    	}
+    }
+
+    if err := scanner.Err(); err != nil {
+    	return nil, fmt.Errorf(&#34;scan: %w&#34;, err)
+    }
+
+    return movesList, nil
+
+}
+
+func (s \*Simulation) Run() (int, error) {
+
+    count := 0
+    currentPosition := s.InitialPosition
+
+    for _, move := range s.Moves {
+    	position := currentPosition + move
+    	currentPosition = s.Wrap(position)
+
+    	if currentPosition == s.Target {
+    		count++
+    	}
+    }
+    return count, nil
+
+}
+
+func (s \*Simulation) Wrap(position int) int {
+return ((position % s.TotalPositions) + s.TotalPositions) % s.TotalPositions
+}
+</code></pre>  
+ <footer>
+   Website made by  in 2026
+ </footer>
+
+  </body>
+</html>
