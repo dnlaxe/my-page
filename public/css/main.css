@@ -18,19 +18,13 @@ h1 {
   font-weight: 500;
 }
 
-p {
-  line-height: 1.6;
-  font-size: 18px;
-}
-
 pre {
-  background: #111;
+  background: #424242;
   color: #f5f5f5;
   padding: 1rem;
   border-radius: 8px;
+  overflow-x: auto;
   line-height: 1.5;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
 }
 
 pre code {
@@ -48,7 +42,6 @@ code {
 }
 
 main {
-  max-width: 750px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 16px;
 }

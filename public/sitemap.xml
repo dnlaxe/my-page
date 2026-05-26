@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/advent-of-code-2025/</loc>
+    <loc>http://localhost:1313/my-page/tags/advent-of-code-2025/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/advent-of-code-2025/</loc>
+    <loc>http://localhost:1313/my-page/categories/advent-of-code-2025/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/my-page/posts/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/my-page/categories/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/aoc-2025-day-01/</loc>
+    <loc>http://localhost:1313/my-page/posts/aoc-2025-day-01/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/go/</loc>
+    <loc>http://localhost:1313/my-page/tags/go/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/my-page/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/modulus-on-negative-numbers/</loc>
+    <loc>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/my-page/tags/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2022-04-03-i-like-to-roar/</loc>
+    <loc>http://localhost:1313/my-page/posts/2022-04-03-i-like-to-roar/</loc>
     <lastmod>2022-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2022-04-02-today-i-made-friends/</loc>
+    <loc>http://localhost:1313/my-page/posts/2022-04-02-today-i-made-friends/</loc>
     <lastmod>2022-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/my-page/about/</loc>
   </url>
 </urlset>

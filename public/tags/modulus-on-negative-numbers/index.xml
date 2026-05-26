@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Modulus on Negative Numbers on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/modulus-on-negative-numbers/</link>
+    <link>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</link>
     <description>Recent content in Modulus on Negative Numbers on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/modulus-on-negative-numbers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-page/tags/modulus-on-negative-numbers/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Day 1: Secret Entrance</title>
-      <link>http://localhost:1313/posts/aoc-2025-day-01/</link>
+      <title>Day 1 | Secret Entrance</title>
+      <link>http://localhost:1313/my-page/posts/aoc-2025-day-01/</link>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/aoc-2025-day-01/</guid>
-      <description>package main import ( &amp;#34;bufio&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strconv&amp;#34; ) type Simulation struct { Moves []int InitialPosition int TotalPositions int Target int } func main() { moves, err := ParseInstructionsFromFile(&amp;#34;input.txt&amp;#34;) if err != nil { fmt.Println(&amp;#34;Failed to parse instructions: &amp;#34;, err) return } sim, err := NewSimulation(moves, 50, 100, 0) if err != nil { fmt.Println(&amp;#34;Simulation could not be created:&amp;#34;, err) return } result, err := sim.Run() if err != nil { fmt.</description>
+      <guid>http://localhost:1313/my-page/posts/aoc-2025-day-01/</guid>
+      <description>This is my solution to https://adventofcode.com/2025/day/1.&#xA;The Gist&#xA;Given a list of instructions for turning a 100 position circular safe dial (numbered 0 to 99), track the position of the dial as we spin it left and right, and count how many times it lands on exactly 0.&#xA;Notes on Modulus on Negative Numbers&#xA;In Go, % doesn&amp;rsquo;t mean modulo, it means remainder. Because of this, it cannot be used directly to find the modulus of negative numbers.</description>
     </item>
   </channel>
 </rss>

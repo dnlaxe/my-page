@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on My New Hugo Site</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:1313/my-page/posts/</link>
     <description>Recent content in Blog on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-page/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Day 1 | Secret Entrance</title>
-      <link>http://localhost:1313/posts/aoc-2025-day-01/</link>
+      <link>http://localhost:1313/my-page/posts/aoc-2025-day-01/</link>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/aoc-2025-day-01/</guid>
+      <guid>http://localhost:1313/my-page/posts/aoc-2025-day-01/</guid>
       <description>This is my solution to https://adventofcode.com/2025/day/1.&#xA;The Gist&#xA;Given a list of instructions for turning a 100 position circular safe dial (numbered 0 to 99), track the position of the dial as we spin it left and right, and count how many times it lands on exactly 0.&#xA;Notes on Modulus on Negative Numbers&#xA;In Go, % doesn&amp;rsquo;t mean modulo, it means remainder. Because of this, it cannot be used directly to find the modulus of negative numbers.</description>
     </item>
     <item>
       <title>I like to roar</title>
-      <link>http://localhost:1313/posts/2022-04-03-i-like-to-roar/</link>
+      <link>http://localhost:1313/my-page/posts/2022-04-03-i-like-to-roar/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022-04-03-i-like-to-roar/</guid>
+      <guid>http://localhost:1313/my-page/posts/2022-04-03-i-like-to-roar/</guid>
       <description>Hi, quick update from me. I just want to let everyone know that I like roaring.&#xA;Hello hekoegkergt&#xA;srhueausjk eatj sgh``` </description>
     </item>
     <item>
       <title>Today I made friends</title>
-      <link>http://localhost:1313/posts/2022-04-02-today-i-made-friends/</link>
+      <link>http://localhost:1313/my-page/posts/2022-04-02-today-i-made-friends/</link>
       <pubDate>Sat, 02 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2022-04-02-today-i-made-friends/</guid>
+      <guid>http://localhost:1313/my-page/posts/2022-04-02-today-i-made-friends/</guid>
       <description>I got lost in the woods today. Two friends, a Meerkat and a Warthog, found me, sung a song with me and gave my life new meaning. Today was a good day.</description>
     </item>
   </channel>
