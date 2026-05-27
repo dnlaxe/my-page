@@ -3,30 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/my-page/tags/advent-of-code-2025/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/categories/advent-of-code-2025/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/posts/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/categories/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/my-page/posts/aoc-2025-day-01/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/my-page/posts/aoc-2025-day-02-p1/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/tags/go/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/tags/korean/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/categories/learning-korean/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/posts/learning-korean-resource-gems/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/tags/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/tags/topik/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/tags/topik-speaking/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/tags/typography/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/categories/typography/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/posts/typography-resource-gems/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/tags/web-design/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/posts/aoc-2025-day-01-p1/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/posts/2022-04-03-i-like-to-roar/</loc>

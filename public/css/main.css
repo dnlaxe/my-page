@@ -51,4 +51,10 @@ main {
 
 h2 {
   font-family: "Caveat";
+  color: #424242;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
 }

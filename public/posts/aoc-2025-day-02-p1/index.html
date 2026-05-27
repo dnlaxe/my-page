@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <script src="/my-page/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-page/livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Day 2, Part 1, Gift Shop</title>
+<link rel="stylesheet" href="/my-page/css/main.css" />
+
+  <body>
+    <main>
+      <nav>
+  <ul>
+    <li><a href="/my-page/">Home</a></li>
+    <li><a href="/my-page/about/">About</a></li>
+    <li><a href="/my-page/posts/">Blog</a></li>
+  </ul>
+</nav>
+ 
+<h1>Day 2, Part 1, Gift Shop</h1>
+<p>May 27, 2026</p>
+
+
+<p>Series: Advent of Code 2025</p>
+ 
+<p>
+  Tags: 
+  <span>Advent of Code 2025</span>
+  
+  <span>Modulus on Negative Numbers</span>
+  
+  <span>Go</span>
+  
+</p>
+ 
+<p>
+  Categories: 
+  <span>Advent of Code 2025</span>
+  
+</p>
+ <p>This is my solution to <a href="https://adventofcode.com/2025/day/2">https://adventofcode.com/2025/day/2</a>.</p>
+<h2 id="the-gist">The Gist</h2>
+<p>Given a list of comma-separated number ranges, scan for invalid IDs formed by a sequence of digits repeated exactly twice (such as 55 or 123123) with no leading zeroes, and calculate the total sum of these numbers.</p>
+<h2 id="slicing-numbers-without-string-manipulation">Slicing numbers without string manipulation</h2>
+<p>Using pure math is better than string manipulation because&hellip;</p>
+<p>Math happens in the stack, string manipulation needs memory on the heap.</p>
+<p>After Math happens it vanishes, dead strings need to be garbage collected.</p>
+<p>Integers are easier for CPU to process than strings which are arrays of bytes.</p>
+<pre tabindex="0"><code>halfLength := numberLength / 2
+divisor := int(math.Pow(10, float64(halfLength)))
+first := number / divisor
+second := number % divisor
+</code></pre><h2 id="my-final-code">My final code</h2>
+<pre tabindex="0"><code>package main
+
+import (
+	&#34;fmt&#34;
+	&#34;log&#34;
+	&#34;math&#34;
+	&#34;os&#34;
+	&#34;strconv&#34;
+	&#34;strings&#34;
+)
+
+type Range struct {
+	Start int
+	End   int
+}
+
+func main() {
+
+	ranges, err := ParseNumbersFromFile(&#34;input.txt&#34;)
+	if err != nil {
+		log.Fatalf(&#34;Fatal: Failed to read input file: %v\n&#34;, err)
+	}
+
+	invalidNumbersSum := 0
+
+	for _, r := range ranges {
+		for i := r.Start; i &lt;= r.End; i++ {
+			if hasRepeatingHalves(i) {
+				invalidNumbersSum += i
+			}
+		}
+	}
+	fmt.Println(invalidNumbersSum)
+}
+
+func ParseNumbersFromFile(filename string) (ranges []Range, err error) {
+	data, err := os.ReadFile(filename)
+	if err != nil {
+		return nil, fmt.Errorf(&#34;Failed to open file: %v&#34;, err)
+	}
+
+	fileString := string(data)
+
+	stringPairs := strings.Split(fileString, &#34;,&#34;)
+
+	var finalPairs []Range
+
+	for _, pair := range stringPairs {
+
+		stringNums := strings.Split(pair, &#34;-&#34;)
+
+		if len(stringNums) != 2 {
+			log.Printf(&#34;Warning: Skipping malformed pair (missing hyphen) &#39;%s&#39;\n&#34;, pair)
+			continue
+		}
+
+		first, err1 := strconv.Atoi(stringNums[0])
+		second, err2 := strconv.Atoi(stringNums[1])
+
+		if err1 != nil || err2 != nil {
+			log.Printf(&#34;Warning: Skipping invalid line &#39;%s&#39;\n&#34;, pair)
+			continue
+		}
+
+		parsedPair := NewRange(first, second)
+
+		finalPairs = append(finalPairs, parsedPair)
+	}
+
+	return finalPairs, nil
+}
+
+func hasRepeatingHalves(number int) bool {
+	numberLength := len(strconv.Itoa(number))
+	if numberLength%2 != 0 {
+		return false
+	}
+
+	halfLength := numberLength / 2
+	divisor := int(math.Pow(10, float64(halfLength)))
+	first := number / divisor
+	second := number % divisor
+
+	return (first == second)
+}
+
+func NewRange(start, end int) Range {
+	if start &gt; end {
+		return Range{
+			Start: end,
+			End:   start,
+		}
+	}
+	return Range{
+		Start: start,
+		End:   end,
+	}
+}
+</code></pre><p>The answer this generated was correct.</p>
+  
+ <footer>
+   Website made by  in 2026
+ </footer>
+
+    </main>
+  </body>
+</html>
