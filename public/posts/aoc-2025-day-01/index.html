@@ -2,7 +2,7 @@
 <html>
   <script src="/my-page/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-page/livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Day 1 | Secret Entrance</title>
+<title>Day 1 | Secret Entrance | Part 1</title>
 <link rel="stylesheet" href="/my-page/css/main.css" />
 
   <body>
@@ -15,7 +15,7 @@
   </ul>
 </nav>
  
-<h1>Day 1 | Secret Entrance</h1>
+<h1>Day 1 | Secret Entrance | Part 1</h1>
 <p>May 26, 2026</p>
 
 
@@ -37,9 +37,9 @@
   
 </p>
  <p>This is my solution to <a href="https://adventofcode.com/2025/day/1">https://adventofcode.com/2025/day/1</a>.</p>
-<p><strong>The Gist</strong></p>
+<h2 id="the-gist">The Gist</h2>
 <p>Given a list of instructions for turning a 100 position circular safe dial (numbered 0 to 99), track the position of the dial as we spin it left and right, and count how many times it lands on exactly 0.</p>
-<p><strong>Notes on Modulus on Negative Numbers</strong></p>
+<h2 id="notes-on-modulus-on-negative-numbers">Notes on Modulus on Negative Numbers</h2>
 <p>In Go, % doesn&rsquo;t mean modulo, it means remainder. Because of this, it cannot be used directly to find the modulus of negative numbers.</p>
 <p>For example, -1 % 5 mathematically should be 4, but Go will evaluate it to be -1 because it truncates towards 0.</p>
 <p>To solve this, first evaluate the expression and see whether the result is negative or positive (including the 0 case).</p>
@@ -66,7 +66,7 @@
 <p>((a % b) + b) % b: The final modulo has no effect on the originally negative result, but safely wraps the positive result back into the correct boundary.</p>
 </li>
 </ul>
-<p><strong>My final code</strong></p>
+<h2 id="my-final-code">My final code</h2>
 <pre tabindex="0"><code class="language-package" data-lang="package">
 import (
 	&#34;bufio&#34;

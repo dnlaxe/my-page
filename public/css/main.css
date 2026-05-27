@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
 ul,
@@ -45,4 +47,8 @@ main {
   max-width: 600px;
   margin: 0 auto;
   padding: 16px;
+}
+
+h2 {
+  font-family: "Caveat";
 }
