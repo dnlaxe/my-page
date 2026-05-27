@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>AI</title>
+      <link>http://localhost:1313/my-page/tags/ai/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-page/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Go</title>
       <link>http://localhost:1313/my-page/tags/go/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
@@ -30,10 +37,24 @@
       <description></description>
     </item>
     <item>
+      <title>Learning</title>
+      <link>http://localhost:1313/my-page/tags/learning/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-page/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Modulus on Negative Numbers</title>
       <link>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/my-page/tags/programming/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-page/tags/programming/</guid>
       <description></description>
     </item>
     <item>

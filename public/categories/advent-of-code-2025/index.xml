@@ -16,7 +16,7 @@
       <description>This is my solution to https://adventofcode.com/2025/day/2.&#xA;The Gist Given a list of comma-separated number ranges, scan for invalid IDs formed by a sequence of digits repeated exactly twice (such as 55 or 123123) with no leading zeroes, and calculate the total sum of these numbers.&#xA;Slicing numbers without string manipulation Using pure math is better than string manipulation because&amp;hellip;&#xA;Math happens in the stack, string manipulation needs memory on the heap.</description>
     </item>
     <item>
-      <title>Day 1 | Secret Entrance | Part 1</title>
+      <title>Day 1, Secret Entrance, Part 1</title>
       <link>http://localhost:1313/my-page/posts/aoc-2025-day-01-p1/</link>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/my-page/posts/aoc-2025-day-01-p1/</guid>

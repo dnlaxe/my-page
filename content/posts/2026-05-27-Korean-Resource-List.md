@@ -7,4 +7,6 @@ series: "Learning Korean"
 slug: "learning-korean-resource-gems"
 ---
 
+## Translated News
+
 https://koreajoongangdaily.joins.com/section/bilingualNews

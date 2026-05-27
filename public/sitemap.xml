@@ -8,6 +8,9 @@
     <loc>http://localhost:1313/my-page/categories/advent-of-code-2025/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/my-page/tags/ai/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/my-page/posts/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -26,6 +29,12 @@
     <loc>http://localhost:1313/my-page/tags/korean/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/my-page/tags/learning/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/categories/learning/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/my-page/categories/learning-korean/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -35,7 +44,13 @@
     <loc>http://localhost:1313/my-page/tags/modulus-on-negative-numbers/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/my-page/tags/programming/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/my-page/tags/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-page/posts/best-time-to-learn/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-page/tags/topik/</loc>

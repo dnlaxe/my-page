@@ -2,7 +2,7 @@
 <html>
   <script src="/my-page/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-page/livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Day 1 | Secret Entrance | Part 1</title>
+<title>Day 1, Secret Entrance</title>
 <link rel="stylesheet" href="/my-page/css/main.css" />
 
   <body>
@@ -15,7 +15,7 @@
   </ul>
 </nav>
  
-<h1>Day 1 | Secret Entrance | Part 1</h1>
+<h1>Day 1, Secret Entrance</h1>
 <p>May 26, 2026</p>
 
 
@@ -37,6 +37,7 @@
   
 </p>
  <p>This is my solution to <a href="https://adventofcode.com/2025/day/1">https://adventofcode.com/2025/day/1</a>.</p>
+<h1 id="part-1">Part 1</h1>
 <h2 id="the-gist">The Gist</h2>
 <p>Given a list of instructions for turning a 100 position circular safe dial (numbered 0 to 99), track the position of the dial as we spin it left and right, and count how many times it lands on exactly 0.</p>
 <h2 id="notes-on-modulus-on-negative-numbers">Notes on Modulus on Negative Numbers</h2>
@@ -181,7 +182,44 @@ func (s *Simulation) Run() (int, error) {
 func (s *Simulation) Wrap(position int) int {
 	return ((position % s.TotalPositions) + s.TotalPositions) % s.TotalPositions
 }
-</code></pre><p>The answer this generated was correct.</p>
+</code></pre><p>The answer this generated was correct so&hellip;</p>
+<h1 id="part-2">Part 2</h1>
+<h2 id="the-gist-1">The Gist</h2>
+<p>Given a sequence of instructions for turning a 100 position circular dial, calculate the password by totaling every time the dial passes through 0, including full rotations and partial movements that cross the zero mark during the transition, rather than just checking its final landing spot.</p>
+<h2 id="updated-run-function">Updated Run function</h2>
+<pre tabindex="0"><code>func (s *Simulation) Run() (int, error) {
+	count := 0
+	currentPosition := s.InitialPosition
+
+	for _, move := range s.Moves {
+		distance := move
+		if distance &lt; 0 {
+			distance = -distance
+		}
+
+		fullTurns := distance / s.TotalPositions
+		remainder := distance % s.TotalPositions
+
+		count += fullTurns
+
+		if move &gt; 0 {
+			if currentPosition+remainder &gt;= s.TotalPositions {
+				count++
+			}
+		} else {
+			if remainder != 0 &amp;&amp; currentPosition != 0 &amp;&amp; currentPosition-remainder &lt;= 0 {
+				count++
+			}
+		}
+
+		currentPosition = s.Wrap(currentPosition + move)
+	}
+
+	return count, nil
+}
+</code></pre><p>Full turns shows how many times it crosses zero. But it is also important to consider the remainder as that may too be enough to push the dial past zero.</p>
+<p>If the move was positive and it&rsquo;s remainder pushes the position past 99, one more is added.</p>
+<p>If the move is negative, leaves a remainder, is not currently on zero and it&rsquo;s current position with remainder subtracted is less than zero, the dial has crossed zero so one more should be added.</p>
   
  <footer>
    Website made by  in 2026

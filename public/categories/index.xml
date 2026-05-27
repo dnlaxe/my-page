@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Learning</title>
+      <link>http://localhost:1313/my-page/categories/learning/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-page/categories/learning/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Learning Korean</title>
       <link>http://localhost:1313/my-page/categories/learning-korean/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>

@@ -7,8 +7,17 @@ series: "Typography"
 slug: "typography-resource-gems"
 ---
 
-Font v typography difference
+## Definitions
 
-font wolf list
+Typeface: what it looks like
+Font: how it's delivered, size, weight etc
+Typography: how it's arranged, line height, letter spacing etc
 
-material 2 design suggestions
+## Links
+
+https://fontsinuse.com/
+https://www.typewolf.com/
+
+## Material Design 2 Typography Guide
+
+https://m2.material.io/design/typography/the-type-system.html#type-scale
