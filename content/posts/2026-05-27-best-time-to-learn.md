@@ -3,7 +3,7 @@ title: "The Best Time to Learn"
 date: 2026-05-27
 tags: ["Programming", "Learning", "AI"]
 categories: ["Learning"]
-series: "Learning"
+series: "Inspiration"
 slug: "best-time-to-learn"
 ---
 

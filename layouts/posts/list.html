@@ -1,14 +1,43 @@
 {{ define "main" }}
 <h1>My posts</h1>
+
+<select id="filter-select">
+  <option value="all">All</option>
+  {{ $allSeries := slice }} {{ range .Pages }} {{ with .Params.series }} {{
+  $allSeries = $allSeries | append . }} {{ end }} {{ end }} {{ range ($allSeries
+  | uniq) }}
+  <option value="{{ . | urlize }}">{{ . }}</option>
+  {{ end }}
+</select>
+
 <ul>
   {{ range .Pages }}
-  <li>
+  <li
+    class="post-item"
+    data-series="{{ with .Params.series }}{{ . | urlize }}{{ else }}none{{ end }}"
+  >
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <p>{{ .Date.Format "2006-01-02" }}</p>
-    {{ with .Params.series }}
-    <p>Series: {{ . }}</p>
-    {{ end }}
+    <p>{{ .Date.Format "January 2, 2006" }}</p>
   </li>
   {{ end }}
 </ul>
+
+<script>
+  const filter = document.querySelector("#filter-select");
+  const items = document.querySelectorAll(".post-item");
+
+  filter.addEventListener("change", (e) => {
+    const selected = e.target.value;
+
+    items.forEach((item) => {
+      // If 'all' is chosen, show everything.
+      // Otherwise, check if the data-series matches the selected value.
+      if (selected === "all" || item.dataset.series === selected) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+</script>
 {{ end }}

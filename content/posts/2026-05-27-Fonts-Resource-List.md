@@ -3,15 +3,17 @@ title: "Typography: Ongoing Resourse List"
 date: 2026-05-27
 tags: ["Typography", "Web Design"]
 categories: ["Typography"]
-series: "Typography"
+series: "Lists"
 slug: "typography-resource-gems"
 ---
 
 ## Definitions
 
-Typeface: what it looks like
-Font: how it's delivered, size, weight etc
-Typography: how it's arranged, line height, letter spacing etc
+**Typeface**: what it looks like
+
+**Font**: how it's delivered, size, weight etc
+
+**Typography**: how it's arranged, line height, letter spacing etc
 
 ## Links
 

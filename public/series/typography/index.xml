@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Typography on My New Hugo Site</title>
-    <link>http://localhost:1313/my-page/categories/typography/</link>
+    <link>http://localhost:1313/my-page/series/typography/</link>
     <description>Recent content in Typography on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/my-page/categories/typography/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-page/series/typography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typography: Ongoing Resourse List</title>
       <link>http://localhost:1313/my-page/posts/typography-resource-gems/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/my-page/posts/typography-resource-gems/</guid>
-      <description>Definitions Typeface: what it looks like&#xA;Font: how it&amp;rsquo;s delivered, size, weight etc&#xA;Typography: how it&amp;rsquo;s arranged, line height, letter spacing etc&#xA;Links https://fontsinuse.com/ https://www.typewolf.com/&#xA;Material Design 2 Typography Guide https://m2.material.io/design/typography/the-type-system.html#type-scale</description>
+      <description>Definitions Typeface: what it looks like Font: how it&amp;rsquo;s delivered, size, weight etc Typography: how it&amp;rsquo;s arranged, line height, letter spacing etc&#xA;Links https://fontsinuse.com/ https://www.typewolf.com/&#xA;Material Design 2 Typography Guide https://m2.material.io/design/typography/the-type-system.html#type-scale</description>
     </item>
   </channel>
 </rss>

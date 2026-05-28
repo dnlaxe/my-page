@@ -16,61 +16,104 @@
 </nav>
  
 <h1>My posts</h1>
+
+<select id="filter-select">
+  <option value="all">All</option>
+                                
+  <option value="advent-of-code-2025">Advent of Code 2025</option>
+  
+  <option value="lists">Lists</option>
+  
+  <option value="inspiration">Inspiration</option>
+  
+</select>
+
 <ul>
   
-  <li>
-    <a href="/my-page/posts/aoc-2025-day-02-p1/">Day 2, Part 1, Gift Shop</a>
-    <p>2026-05-27</p>
-    
-    <p>Series: Advent of Code 2025</p>
-    
+  <li
+    class="post-item"
+    data-series="advent-of-code-2025"
+  >
+    <a href="/my-page/posts/aoc-2025-day-02/">Day 2: Gift Shop</a>
+    <p>May 27, 2026</p>
   </li>
   
-  <li>
+  <li
+    class="post-item"
+    data-series="advent-of-code-2025"
+  >
+    <a href="/my-page/posts/aoc-2025-day-03/">Day 3: Lobby</a>
+    <p>May 27, 2026</p>
+  </li>
+  
+  <li
+    class="post-item"
+    data-series="lists"
+  >
     <a href="/my-page/posts/learning-korean-resource-gems/">Learning Korean: Ongoing Resourse List</a>
-    <p>2026-05-27</p>
-    
-    <p>Series: Learning Korean</p>
-    
+    <p>May 27, 2026</p>
   </li>
   
-  <li>
+  <li
+    class="post-item"
+    data-series="inspiration"
+  >
     <a href="/my-page/posts/best-time-to-learn/">The Best Time to Learn</a>
-    <p>2026-05-27</p>
-    
-    <p>Series: Learning</p>
-    
+    <p>May 27, 2026</p>
   </li>
   
-  <li>
+  <li
+    class="post-item"
+    data-series="lists"
+  >
     <a href="/my-page/posts/typography-resource-gems/">Typography: Ongoing Resourse List</a>
-    <p>2026-05-27</p>
-    
-    <p>Series: Typography</p>
-    
+    <p>May 27, 2026</p>
   </li>
   
-  <li>
-    <a href="/my-page/posts/aoc-2025-day-01-p1/">Day 1, Secret Entrance</a>
-    <p>2026-05-26</p>
-    
-    <p>Series: Advent of Code 2025</p>
-    
+  <li
+    class="post-item"
+    data-series="advent-of-code-2025"
+  >
+    <a href="/my-page/posts/aoc-2025-day-01/">Day 1, Secret Entrance</a>
+    <p>May 26, 2026</p>
   </li>
   
-  <li>
+  <li
+    class="post-item"
+    data-series="none"
+  >
     <a href="/my-page/posts/2022-04-03-i-like-to-roar/">I like to roar</a>
-    <p>2022-04-03</p>
-    
+    <p>April 3, 2022</p>
   </li>
   
-  <li>
+  <li
+    class="post-item"
+    data-series="none"
+  >
     <a href="/my-page/posts/2022-04-02-today-i-made-friends/">Today I made friends</a>
-    <p>2022-04-02</p>
-    
+    <p>April 2, 2022</p>
   </li>
   
 </ul>
+
+<script>
+  const filter = document.querySelector("#filter-select");
+  const items = document.querySelectorAll(".post-item");
+
+  filter.addEventListener("change", (e) => {
+    const selected = e.target.value;
+
+    items.forEach((item) => {
+      
+      
+      if (selected === "all" || item.dataset.series === selected) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+</script>
  
  <footer>
    Website made by  in 2026

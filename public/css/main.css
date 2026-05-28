@@ -6,7 +6,15 @@
 
 body {
   margin: 0;
-  font-family: Arial;
+  font-family:
+    system-ui,
+    segoe ui,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    apple color emoji,
+    segoe ui emoji;
 }
 
 ul,
@@ -15,6 +23,7 @@ ol {
   padding: 0;
   list-style: none;
 }
+font-family: Arial;
 
 p {
   line-height: 1.5;
@@ -60,4 +69,27 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
+}
+
+nav ul {
+  display: flex;
+  gap: 4px;
+}
+
+.post-item {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  margin: 20px 0;
+}
+
+.post-item a {
+  font-size: 1.4rem;
+}
+
+.post-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+  flex-shrink: 0;
 }

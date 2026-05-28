@@ -9,11 +9,18 @@
     <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/my-page/categories/advent-of-code-2025/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Day 2, Part 1, Gift Shop</title>
+      <title>Day 2: Gift Shop</title>
       <link>http://localhost:1313/my-page/posts/aoc-2025-day-02-p1/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/my-page/posts/aoc-2025-day-02-p1/</guid>
-      <description>This is my solution to https://adventofcode.com/2025/day/2.&#xA;The Gist Given a list of comma-separated number ranges, scan for invalid IDs formed by a sequence of digits repeated exactly twice (such as 55 or 123123) with no leading zeroes, and calculate the total sum of these numbers.&#xA;Slicing numbers without string manipulation Using pure math is better than string manipulation because&amp;hellip;&#xA;Math happens in the stack, string manipulation needs memory on the heap.</description>
+      <description>This is my solution to https://adventofcode.com/2025/day/2.&#xA;Part 1 The Gist Given a list of comma-separated number ranges, scan for invalid IDs formed by a sequence of digits repeated exactly twice (such as 55 or 123123) with no leading zeroes, and calculate the total sum of these numbers.&#xA;Slicing numbers without string manipulation Using pure math is better than string manipulation because&amp;hellip;&#xA;Math happens in the stack, string manipulation needs memory on the heap.</description>
+    </item>
+    <item>
+      <title>Day 3: Lobby</title>
+      <link>http://localhost:1313/my-page/posts/aoc-2025-day-02-p1/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-page/posts/aoc-2025-day-02-p1/</guid>
+      <description>This is my solution to https://adventofcode.com/2025/day/3.&#xA;Part 1 The Gist Given a list of battery banks represented as strings of digits, identify the two digits within each bank that form the highest possible numerical value while maintaining their original relative order, then calculate the sum of these maximum joltages across all banks.&#xA;Code for part 1 package main import ( &amp;#34;bufio&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;os&amp;#34; ) type BatteryRow struct { Readings []int } func main() { data, err := ParseDataFromFile(&amp;#34;input.</description>
     </item>
     <item>
       <title>Day 1, Secret Entrance</title>
